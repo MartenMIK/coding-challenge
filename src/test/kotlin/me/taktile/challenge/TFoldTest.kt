@@ -3,7 +3,7 @@ package me.taktile.challenge
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class FoldTest {
+class TFoldTest {
 
     private val addition: ((Int, Int) -> Int) = { a, b -> a + b }
 
