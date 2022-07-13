@@ -7,14 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Run tests
-        run: .\gradlew.bat test
+        run: ./gradlew.bat test
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
       - name: Lint
-        run: .\gradlew.bat ktlintCheck
+        run: ./gradlew.bat ktlintCheck
