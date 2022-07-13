@@ -9,7 +9,7 @@ class TFoldTest {
 
     @Test
     fun testAllElementsEffected() {
-        val list = listOf(1,2,3)
+        val list = listOf(1, 2, 3)
         val foldResult = list.tFold(0, addition)
         assertEquals(6, foldResult)
     }
@@ -38,7 +38,7 @@ class TFoldTest {
     @Test
     fun testDifferentTypes() {
         val concat: ((Char, String) -> String) = { a, b -> b + a }
-        val list = listOf('W','o','r','l','d','!')
+        val list = listOf('W', 'o', 'r', 'l', 'd', '!')
         assertEquals("World!", list.tFold("", concat))
         assertEquals("Hello, World!", list.tFold("Hello, ", concat))
     }
