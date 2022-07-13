@@ -1,4 +1,29 @@
-# Taktile Coding Challenge
+# Taktile Challenge
+
+This library offers an implementation of the [fold function](https://en.wikipedia.org/wiki/Fold_(higher-order_function)) as an Kotlin Extension Function for Kotlin Lists. It implements the standard first to last order of application.
+
+## Usage 
+
+The library is not yet hosted. Import it via the ``` build/libs/taktile-challenge-1.0.jar ``` that is generated in  by running ``` ./gradlew.bat build ```.
+After importing the .jar, the .tFold extension to lists is available: 
+```
+import me.taktile.challenge.tFold
+
+fun example() {
+        val addition: ((Int, Int) -> Int) = { a, b -> a + b }
+        val list = listOf(1, 2, 3)
+        val foldResult = list.tFold(0, addition)
+        assertEquals(6, foldResult)
+    }
+
+```
+
+## Testing and Linting
+To run the tests use ``` ./gradlew.bat build ```   
+To run the linter use ``` ./gradlew.bat ktlintFormat ```
+
+
+# (Original Task) Taktile Coding Challenge
 
 Your challenge is to implement `fold` in the language of your choice.
 
